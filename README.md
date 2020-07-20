@@ -1,7 +1,7 @@
 HoloRoom2FBX
 ========================
 
-[![N|Solid](https://cdn.discordapp.com/attachments/587016692081885230/734747022099480656/telegram.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://cdn.discordapp.com/attachments/587016692081885230/734747022099480656/telegram.png)](https://t.me/D_o_r_G)
 ***
 What was used:
   - Unity 2018.4.21
