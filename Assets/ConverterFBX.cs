@@ -1,27 +1,36 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using UnityEngine; 
 using UnityFBXExporter;
 
 public class ConverterFBX : MonoBehaviour
 {
-    [Header("For Spatial Awareness System")]
-    [SerializeField] private GameObject objMeshToExport;   
-    [SerializeField] private bool canGenerate = false;
-
-    void Start()
+    public void ClickSave()
     {
-        if (canGenerate && objMeshToExport != null)
+        try
         {
-            string path = Path.Combine(Application.persistentDataPath, "data");
-            path = Path.Combine(path, objMeshToExport.name + ".fbx");
-
-            if (!Directory.Exists(Path.GetDirectoryName(path)))
+            GameObject roomMesh = GameObject.Find("Spatial Awareness System");
+            if (roomMesh != null)
             {
-                Directory.CreateDirectory(Path.GetDirectoryName(path));
-            }
+                string path = Path.Combine(Application.persistentDataPath, "data");
+                path = Path.Combine(path, roomMesh.name + ".fbx");
 
-            FBXExporter.ExportGameObjToFBX(objMeshToExport, path, true, true);
-            Debug.Log($"Файл {objMeshToExport.name}.fbx создан, в {path}");
+                if (!Directory.Exists(Path.GetDirectoryName(path)))
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(path));
+                }
+
+                FBXExporter.ExportGameObjToFBX(roomMesh, path, false, false);
+                Debug.Log($"ASCII FBX file was created in {path}");
+            }
+            else
+            {
+                Debug.LogWarning("Mesh does not exist");
+            }
+        }
+        catch(Exception e)
+        {
+            Debug.LogError(e.Message);
         }
     }
 }
