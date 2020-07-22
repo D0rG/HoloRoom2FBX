@@ -1,12 +1,12 @@
 HoloRoom2FBX
 ========================
 
-[![N|Solid](https://cdn.discordapp.com/attachments/587016692081885230/734747022099480656/telegram.png)](https://t.me/D_o_r_G)
+[![My Telegram](https://img.shields.io/badge/Telegram-%40D__o__r__G-blue)](https://t.me/D_o_r_G)
 ***
 What was used:
-  - Unity 2018.4.21
-  - MRTK 2.4.0
-  - Hololens 1 gen.
+  - [![Unity Version](https://img.shields.io/badge/unity-2018.4.21-blue.svg)](https://unity3d.com/get-unity/download)
+  - [![MRTK Version](https://img.shields.io/badge/Microsoft-MRTK%202.4.0-green)](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/tag/v2.4.0)
+  - Hololens 1st gen.
   - Magic
   - [UnityFBXExporter](https://github.com/KellanHiggins/UnityFBXExporter)
 ***
